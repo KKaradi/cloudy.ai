@@ -21,7 +21,7 @@ function imagePathToLatentPath(imagePath: string | undefined) {
 }
 async function initCloudyParams(params: RequestParams) {
   const cloudyParamsFile = await fs.readFile(
-    "C:/Users/kaika/projects/cloudy/utils/modify-cloudy-api.json",
+    "./utils/modify-cloudy-api.json",
     "utf-8"
   );
   const cloudyParams = JSON.parse(cloudyParamsFile);
@@ -49,7 +49,7 @@ export default async function handler(
       const params: RequestParams = req.body;
       const cloudyParams = await initCloudyParams(params);
 
-      const apiUrl = "http://127.0.0.1:5000/start";
+      const apiUrl = `${process.env.FLASK_PORT}/start`;
 
       const response = await fetch(apiUrl, {
         method: "POST",

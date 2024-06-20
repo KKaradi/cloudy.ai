@@ -7,7 +7,7 @@ export default async function handler(
 ) {
   if (req.method === "GET") {
     try {
-      const apiUrl = "http://127.0.0.1:5000/process/"+req.query['id'];
+      const apiUrl = `${process.env.FLASK_PORT}/process/`+req.query['id'];
 
       const response = await fetch(apiUrl);
 

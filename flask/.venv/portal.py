@@ -10,13 +10,13 @@ import os
 
 app = Flask(__name__)
 
-server_address = os.environ['COMFY_PORT']"127.0.0.1:8188"
+server_address = os.environ['COMFY_PORT']
 client_id = str(uuid.uuid4())
 
 process = {}
 
-comfy_path= os.environ['COMFY_PATH']r'C:/Users/kaika/comfyui/new_ComfyUI_windows_portable_nvidia_cu121_or_cpu/ComfyUI_windows_portable/ComfyUI'
-master_sub_dir=os.environ['COMFY_SUB_PATH']r'/v1'
+comfy_path= os.environ['COMFY_PATH']
+master_sub_dir=os.environ['COMFY_SUB_PATH']
 
 def queue_prompt(prompt):
     p = {"prompt": prompt, "client_id": client_id}

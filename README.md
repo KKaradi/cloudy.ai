@@ -1,6 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Overview 
 
-## Getting Started
+Cloudy.ai provides a new UI for comfy ui that supports nodal image generation where every image thats generated may be iterated upon in a branching structure. 
+
+Cloudy.ai is built ontop of a comfy ui server that is run through a flask server which works with a next.js frontend 
+
+### Here are some examples of the possibilities with Cloudy.ai
+![image](example3.png "Title")
+![image](example2.png "Title")
+![image](example.png "Title")
+
+
+# Running Locally
+
+## Setup Environmental Variables
+For the flask server set
+```
+COMFY_PORT: The port to which your comfy ui server is running
+COMFY_PATH: Should end in /ComfyUi, the path to your local comfy ui source code
+COMFY_COMFY_SUB_PATH: Should look like '/v1', the subpath version to differentiate cloudy ai output and input files from any prexisting comfy ui files
+```
+
+
+First, start the server for your local version of comfy ui. If you haven't cloned the comfy ui repository yet the link is here https://github.com/comfyanonymous/ComfyUI.
+
+Then run the 
 
 First, run the development server:
 
@@ -12,29 +35,3 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
